@@ -22,4 +22,26 @@ class CartService {
   static List<Cart> getCart() {
     return cartitems;
   }
+
+  static void decreaseQuantity(Cart cart) {
+    final index =
+        cartitems.indexWhere((item) => item.quantity == cart.quantity);
+    if (index != -1 && cartitems[index].quantity > 1) {
+      cartitems[index].quantity--;
+    } else {
+      removeCart(cart);
+    }
+  }
+
+  static void incrementQuantity(Cart cart) {
+    final index =
+        cartitems.indexWhere((item) => item.quantity == cart.quantity);
+    if (index != -1) {
+      cartitems[index].quantity++;
+    }
+  }
+
+  static void clearCart() {
+    cartitems.clear();
+  }
 }

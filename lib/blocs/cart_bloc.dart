@@ -20,6 +20,21 @@ class CartBloc {
   List<Cart> getCart() {
     return CartService.getCart();
   }
+
+  void decreaseQuantity(Cart cart) {
+    CartService.decreaseQuantity(cart);
+    cartstreamController.sink.add(CartService.getCart());
+  }
+
+  void incrementQuantity(Cart cart) {
+    CartService.incrementQuantity(cart);
+    cartstreamController.sink.add(CartService.getCart());
+  }
+
+  void clearCart() {
+    CartService.clearCart();
+    cartstreamController.sink.add(CartService.getCart());
+  }
 }
 
 final cartBloc = CartBloc();
