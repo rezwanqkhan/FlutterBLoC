@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:bloc/data/product_service.dart';
 import 'package:bloc/models/product.dart';
 
@@ -12,3 +11,5 @@ class ProductBloc {
     return ProductService.getAll();
   }
 }
+
+final productBloc = ProductBloc();

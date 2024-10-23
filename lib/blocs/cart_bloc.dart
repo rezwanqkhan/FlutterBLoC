@@ -21,3 +21,5 @@ class CartBloc {
     return CartService.getCart();
   }
 }
+
+final cartBloc = CartBloc();
