@@ -1,5 +1,3 @@
-// lib/screens/product_list_screen.dart
-
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:shared_preferences/shared_preferences.dart';

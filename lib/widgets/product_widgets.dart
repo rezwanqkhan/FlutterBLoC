@@ -1,8 +1,9 @@
 // lib/widgets/product_list_widgets.dart
 
+import 'package:bloc/blocs/cart_bloc.dart';
 import 'package:flutter/material.dart';
 
-class ProductListWidgets {
+class ProductListWidgets extends StatefulWidget {
   static Widget buildCartButton(VoidCallback onPressed) {
     return Stack(
       children: [
@@ -19,13 +20,19 @@ class ProductListWidgets {
               color: Colors.red,
               shape: BoxShape.circle,
             ),
-            child: const Text(
-              '0',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-              ),
+            child: StreamBuilder(
+              stream: cartBloc.cartStream,
+              builder: (context, snapshot) {
+                final itemCount = snapshot.hasData ? snapshot.data.length : 0;
+                return Text(
+                  '$itemCount',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                );
+              },
             ),
           ),
         ),
@@ -283,5 +290,11 @@ class ProductListWidgets {
           orElse: () => MapEntry('default', Icons.shopping_bag),
         )
         .value;
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
   }
 }

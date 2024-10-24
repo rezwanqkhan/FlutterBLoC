@@ -1,6 +1,4 @@
-// lib/screens/cart_screen.dart
-
-import 'package:bloc/widgets/cart_widget.dart';
+import 'package:bloc/widgets/cart_widgets.dart';
 import 'package:flutter/material.dart';
 import '../blocs/cart_bloc.dart';
 

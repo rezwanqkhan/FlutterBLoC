@@ -2,7 +2,7 @@
 
 A modern e-commerce mobile application built with Flutter, featuring a clean UI design and state management using BLoC pattern.
 
-![App Banner](https://your-banner-image-url.png)
+
 
 ## Features
 
@@ -81,10 +81,11 @@ lib/
 │   ├── cart.dart
 │   └── product.dart
 ├── screens/
-│   ├── product.dart
+│   ├── product_list.dart
 │   └── cart_screen.dart
 ├── widgets/
-│   └── product_card.dart
+│   ├── cart_widgets.dart
+│   └── product_widgets.dart
 └── main.dart
 ```
 
@@ -126,16 +127,34 @@ dependencies:
 ## Screenshots
 
 <table>
+
   <tr>
     <td>Product List</td>
-    <td>Shopping Cart</td>
     <td>Empty Cart</td>
   </tr>
   <tr>
-    <td><img src="screenshots/product_list.png" width=270></td>
-    <td><img src="screenshots/cart.png" width=270></td>
-    <td><img src="screenshots/empty_cart.png" width=270></td>
+    <td><img src="screenshots/productlist.png" width=270></td>
+    <td><img src="screenshots/shopingcartempt.png" width=270></td>
   </tr>
+
+  <tr>
+    <td> Add to Cart</td>
+    <td>Added to Cart</td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/addtocart.png" width=270></td>
+    <td><img src="screenshots/addedtoshoppingcart.png" width=270></td>
+  </tr>
+
+  <tr>
+    <td>Scroll left to Delete</td>
+    <td>Delete All</td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/scrollleftfordelet.png" width=270></td>
+    <td><img src="screenshots/deleteallproduct.png" width=270></td>
+  </tr>
+
 </table>
 
 ## Implementation Details
@@ -183,17 +202,7 @@ The shopping cart features:
 - State management optimization
 - Memory management
 
-## Testing
 
-Run the tests using:
-```bash
-flutter test
-```
-
-### Test Coverage
-- Unit tests for BLoC logic
-- Widget tests for UI components
-- Integration tests for user flows
 
 ## License
 
@@ -207,6 +216,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Contact
 
-Your Name - [@yourusername](https://twitter.com/yourusername)
+Rezwanullah Khan Quraishi - [linkedin](https://www.linkedin.com/in/rezwanullah-quraishi-608314260/)
 
-Project Link: [https://github.com/yourusername/flutter-ecommerce](https://github.com/yourusername/flutter-ecommerce)
+Project Link: [GitHub](https://github.com/rezwanqkhan/FlutterBLoC)

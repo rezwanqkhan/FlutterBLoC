@@ -1,6 +1,6 @@
 import 'package:bloc/models/product.dart';
 import 'package:bloc/screens/cart_screen.dart';
-import 'package:bloc/screens/product.dart';
+import 'package:bloc/screens/product_list.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
