@@ -1,23 +1,25 @@
 import 'package:bloc/models/product.dart';
 
+/// Service class to handle product-related operations and manage product data.
 class ProductService {
-  // Static list to store Product objects, initialized as an empty growable list
+  // Static list to store Product objects, initialized as an empty growable list.
   static List<Product> products = List<Product>.empty(growable: true);
 
-  // Private static instance of ProductService for singleton pattern
+  // Private static instance of ProductService for singleton pattern.
   static final ProductService _singleton = ProductService._internal();
 
-  // Factory constructor that returns the singleton instance
+  // Factory constructor that returns the singleton instance.
   factory ProductService() {
     return _singleton;
   }
 
-  // Private named constructor for internal use
+  // Private named constructor for internal use, ensures only one instance (singleton).
   ProductService._internal();
 
-  // Static method to get all products
+  /// Static method to get all products.
+  /// This method simulates fetching product data, typically from a database or API.
   static List<Product> getAll() {
-    // In a real application, this data might come from a database or API
+    // Adding sample product data. This would be replaced by a database or API call.
     products.add(Product(1, "Laptop", 1000));
     products.add(Product(2, "Mobile", 2000));
     products.add(Product(3, "Tablet", 3000));
@@ -28,7 +30,7 @@ class ProductService {
     products.add(Product(8, "Headset", 8000));
     products.add(Product(9, "Speaker", 9000));
 
-    // Return the list of products
+    // Return the list of products.
     return products;
   }
 }
