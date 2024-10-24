@@ -126,8 +126,9 @@ dependencies:
 
 ## Screenshots
 
-<table>
+<div align="center">
 
+<table>
   <tr>
     <td>Product List</td>
     <td>Empty Cart</td>
@@ -154,8 +155,9 @@ dependencies:
     <td><img src="screenshots/scrollleftfordelet.png" width=270></td>
     <td><img src="screenshots/deleteallproduct.png" width=270></td>
   </tr>
-
 </table>
+
+</div>
 
 ## Implementation Details
 
